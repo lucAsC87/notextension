@@ -1,4 +1,9 @@
 document.getElementById("new_do").addEventListener("click", addTask);
+const taskList = document.getElementById("ft_list");
+let localList = localStorage.getItem("tasks");
+if (localList) {
+  taskList.innerHTML = localList;
+}
 
 function addTask() {
   let task = prompt("Add new task:");
@@ -6,8 +11,8 @@ function addTask() {
     const newListEl = document.createElement("li");
     const newTask = document.createTextNode(task);
     newListEl.appendChild(newTask);
-    const taskList = document.getElementById("ft_list");
     taskList.insertBefore(newListEl, taskList.children[0]);
+    localStorage.setItem("tasks", taskList.innerHTML);
     newListEl.addEventListener("click", function () {
       if (confirm(`Remove ${newListEl.textContent}?`)) {
         newListEl.remove();
