@@ -14,20 +14,21 @@ function addTask() {
     taskList.insertBefore(newListEl, taskList.children[0]);
     localStorage.setItem("tasks", taskList.innerHTML);
     newListEl.addEventListener("click", function () {
-      if (confirm(`Remove ${newListEl.textContent}?`)) {
-        newListEl.remove();
-        localStorage.setItem("tasks", taskList.innerHTML);
-      }
+      deleteItem(newListEl);
     });
   }
 }
 
-let listItems = taskList.getElementsByTagName("li");
+const listItems = taskList.getElementsByTagName("li");
 for (const listItem of listItems) {
   listItem.addEventListener("click", function () {
-    if (confirm(`Remove ${listItem.textContent}?`)) {
-      listItem.remove();
-      localStorage.setItem("tasks", taskList.innerHTML);
-    }
+    deleteItem(listItem);
   });
+}
+
+function deleteItem(item) {
+  if (confirm(`Remove ${item.textContent}?`)) {
+    item.remove();
+    localStorage.setItem("tasks", taskList.innerHTML);
+  }
 }
