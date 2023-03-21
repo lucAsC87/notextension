@@ -3,14 +3,10 @@ body {
 }
 
 ul {
-    padding-left: 2.5vw;
+    padding-left: 3vw;
     font-family: 'Cutive Mono', monospace;
     font-size: 1.2rem;
-}
-
-p {
-    font-size: 1rem;
-    font-family: 'Cutive Mono', monospace;
+    list-style-image: url(./Icons/x-mark.png);
 }
 
 button {
