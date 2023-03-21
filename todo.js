@@ -20,3 +20,12 @@ function addTask() {
     });
   }
 }
+
+let listItems = taskList.getElementsByTagName("li");
+for (const listItem of listItems) {
+  listItem.addEventListener("click", function () {
+    if (confirm(`Remove ${listItem.textContent}?`)) {
+      listItem.remove();
+    }
+  });
+}
