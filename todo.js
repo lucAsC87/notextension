@@ -16,6 +16,7 @@ function addTask() {
     newListEl.addEventListener("click", function () {
       if (confirm(`Remove ${newListEl.textContent}?`)) {
         newListEl.remove();
+        localStorage.setItem("tasks", taskList.innerHTML);
       }
     });
   }
@@ -26,6 +27,7 @@ for (const listItem of listItems) {
   listItem.addEventListener("click", function () {
     if (confirm(`Remove ${listItem.textContent}?`)) {
       listItem.remove();
+      localStorage.setItem("tasks", taskList.innerHTML);
     }
   });
 }
