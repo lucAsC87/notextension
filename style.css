@@ -1,0 +1,32 @@
+body {
+    background-color: #FF8;
+}
+
+ul {
+    padding-left: 2.5vw;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Cutive Mono', monospace;
+}
+
+button {
+    color: #FFF;
+    padding: 0.5rem;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-family: 'Bahiana', display;
+}
+
+#new_do {
+    background-color: #cca302;
+    border: 1px solid #cca302;
+}
+
+#del_all {
+    background-color: #724b11;
+    border: 1px solid #724b11
+}

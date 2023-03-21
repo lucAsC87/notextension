@@ -7,7 +7,7 @@ if (localList) {
 }
 
 function addTask() {
-  let task = prompt("Add new task:");
+  let task = prompt("ADD NEW ELEMENT:");
   if (task) {
     const newListEl = document.createElement("li");
     const newTask = document.createTextNode(task);
@@ -28,14 +28,14 @@ for (const listItem of listItems) {
 }
 
 function deleteItem(item) {
-  if (confirm(`Remove ${item.textContent}?`)) {
+  if (confirm(`REMOVE ${item.textContent}?`)) {
     item.remove();
     localStorage.setItem("tasks", taskList.innerHTML);
   }
 }
 
 function deleteAll() {
-  if (confirm(`Are you sure to delete all?`)) {
+  if (confirm(`ARE YOU SURE TO DELETE ALL?`)) {
     localStorage.clear();
     taskList.innerHTML = "";
   }
