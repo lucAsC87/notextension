@@ -1,5 +1,6 @@
 document.getElementById("new_do").addEventListener("click", addTask);
 const taskList = document.getElementById("ft_list");
+document.getElementById("del_all").addEventListener("click", deleteAll);
 let localList = localStorage.getItem("tasks");
 if (localList) {
   taskList.innerHTML = localList;
@@ -30,5 +31,12 @@ function deleteItem(item) {
   if (confirm(`Remove ${item.textContent}?`)) {
     item.remove();
     localStorage.setItem("tasks", taskList.innerHTML);
+  }
+}
+
+function deleteAll() {
+  if (confirm(`Are you sure to delete all?`)) {
+    localStorage.clear();
+    taskList.innerHTML = "";
   }
 }
