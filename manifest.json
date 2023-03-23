@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Quicknotes",
+    "version": "1.0",
+
+    "description": "Take quick notes directly from your browser.",
+
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    }
+}

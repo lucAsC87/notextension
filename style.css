@@ -1,5 +1,7 @@
 body {
     background-color: #FF8;
+    min-width: 400px;
+    min-height: 200px;
 }
 
 ul {
