@@ -1,18 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "QuickNotes",
-    "version": "1.0",
+  "manifest_version": 3,
+  "name": "QuickNotes",
+  "version": "1.0",
 
-    "description": "Take notes directly from your browser.",
+  "description": "Take notes directly from your browser.",
 
-    "icons": {
-        "48": "icon.png"
-    },
+  "icons": {
+    "48": "icon.png"
+  },
 
-    "action": {
-        "default_area": "navbar",
-        "default_title": "QuickNotes",
-        "default_popup": "index.html",
-        "default_icon": "icon.png"
-    }
+  "action": {
+    "default_area": "navbar",
+    "default_title": "QuickNotes",
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  }
 }
